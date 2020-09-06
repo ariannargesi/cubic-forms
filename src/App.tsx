@@ -10,6 +10,10 @@ const CubeWrapperStyled = styled.div`
   width: 200px;
   height: 200px;
   perspective: 600px;
+  position: absolute;
+  transform: scale(2);
+  top: 20%;
+  left: 30%;
 `
 
 export default function App() {
