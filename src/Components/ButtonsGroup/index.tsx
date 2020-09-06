@@ -23,11 +23,12 @@ const ButtonsGroup: React.FC = () => {
     return (
         <ButtonsGroupStyled>
             <h1>{ store.state.currentFace }</h1>
-            <Button onClick= { () => dispatcher('signup') }> Sign up </Button>
-            <Button onClick= { () => dispatcher('login') }>Login</Button>
-            <Button onClick= { () => dispatcher('forget-password') }> Forget password </Button>
-            <Button onClick= { () => dispatcher('subscribe') }> Subscribe </Button>
-            <Button onClick= { () => dispatcher('contact') }> Contact us </Button>
+            <Button onClick= { () => dispatcher('show-login') }>Login</Button>
+            <Button onClick= { () => dispatcher('show-signup') }> Sign up </Button>
+            <Button onClick= { () => dispatcher('show-forgetpassword') }> Forget password </Button>
+            <Button onClick= { () => dispatcher('show-subscribe') }> Subscribe </Button>
+            <Button onClick= { () => dispatcher('show-contactus') }> Contact us </Button>
+            <Button onClick= { () => dispatcher('show-message') }> Message </Button>
         </ButtonsGroupStyled>
         
     )
