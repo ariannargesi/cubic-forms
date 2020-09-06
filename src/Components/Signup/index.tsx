@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function index() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+type divProps = React.ComponentPropsWithoutRef<'div'>
+
+const SingUp: React.FC<divProps> = (props) => (
+    <div {...props} >Sing Up</div>
+)
+
+
+export default SingUp 

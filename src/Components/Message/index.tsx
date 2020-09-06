@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function index() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+type divProps = React.ComponentPropsWithoutRef<'div'>
+
+const Message: React.FC<divProps> = (props) => (
+    <div {...props} >Message</div>
+)
+
+
+export default Message
