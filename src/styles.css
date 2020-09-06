@@ -3,3 +3,8 @@ body {
     padding: 0;
     background-color: orange;
 }
+.cube_face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
