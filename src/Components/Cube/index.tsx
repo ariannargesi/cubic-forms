@@ -1,37 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import Signup from '../Signup'
+import { Store } from "../../Context";
 
-import Login from '../Login'
-import Singup from '../Signup'
-import ForgetPassword from '../ForgetPassword'
-import ContactUs from '../ContactUs'
-import Subscribe from '../Subscribe'
-import Message from '../Message'
-
-import {Store} from '../../Context'
-
-const CubeStyled = styled.div`
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform: translateZ(-100px);
-    transition: transform 1s;
-    transform-style: preserve-3d;
-`
-
+import "./Cube.css";
 
 const Cube: React.FC = () => {
-    const currentFace = React.useContext(Store).state.currentFace 
-    return (
-        <CubeStyled className={`cube ${currentFace}`} >
-            <Login className="cube-face cube-face-login" />
-            <Singup  className="cube-face cube-face-signup"/>
-            <ForgetPassword className="cube-face cube-face-forgetpassword"/>
-            <ContactUs className="cube-face cube-face-contactus"/>
-            <Subscribe className="cube-face cube-face-subscribe"/> 
-            <Message className="cube-face cube-face-message"/>
-        </CubeStyled>
-    )
-}
+  const currentFace = React.useContext(Store).state.currentFace;
 
-export default Cube 
+  return (
+    <div className="wrapper">
+      <div className={`rec-prism ${currentFace}`}>
+      <Signup/>
+        <div className="face face-top"></div>
+        <div className="face face-back"></div>
+        <div className="face face-right"></div>
+        <div className="face face-left"></div>
+        <div className="face face-bottom"></div>
+      
+      </div>
+    </div>
+  );
+};
+
+export default Cube;
