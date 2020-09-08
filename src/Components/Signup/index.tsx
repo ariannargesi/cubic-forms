@@ -1,10 +1,11 @@
 import React from 'react'
+import Input from '../Input'
+const Signup: React.FC = () => {
+    return (
+        <div className="face face-front">
+            <Input/>
+        </div>
+    )
+}
 
-type divProps = React.ComponentPropsWithoutRef<'div'>
-
-const SingUp: React.FC<divProps> = (props) => (
-    <div {...props} >Sing Up</div>
-)
-
-
-export default SingUp 
+export default Signup 
