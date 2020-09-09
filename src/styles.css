@@ -2,4 +2,10 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Fira Code', monospace;
+	background-image: url('./assets/hector-farahani-7rCuJjbwBR0-unsplash.jpg');
+	background-size: 100% 100vh;
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
