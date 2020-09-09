@@ -1,7 +1,11 @@
 .input {
-    border: 1px solid rgb(219, 219, 219);
-    font-size: 16px;
-    padding: 0.5rem;
     outline: none;
-    font-size: 16px;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    font-family: 'Fira Code';
+}
+.input[type="submit"] {
+    background-color: rgb(164, 251, 34);
+    
 }
