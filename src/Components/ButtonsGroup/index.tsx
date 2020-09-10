@@ -22,7 +22,6 @@ const ButtonsGroup: React.FC = () => {
     }
     return (
         <ButtonsGroupStyled>
-            <h1>{ store.state.currentFace }</h1>
             <Button onClick= { () => dispatcher('show-front') }>Login</Button>
             <Button onClick= { () => dispatcher('show-top') }> Sign up </Button>
             <Button onClick= { () => dispatcher('show-back') }> Forget password </Button>

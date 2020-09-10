@@ -5,11 +5,13 @@ body {
     font-size: 14px;
     padding: 20px;
     text-align: center;
+    background:rgba(128, 128, 128, 0.233);
 }
 .wrapper {
     width: 400px;
     height: 500px;
-    margin: 60px auto;
+    margin-left: 350px;
+    margin-top: 70px;
     text-align: left;
 
 }
@@ -20,9 +22,6 @@ body {
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 0.5s ease-in;
-    background: rgba(211, 211, 211, 0.541);
-    backdrop-filter: blur(5px);
-    
 }
 .face {
     position: absolute;
@@ -30,7 +29,9 @@ body {
     height: 500px;
     padding: 20px;
     border-radius: 3px;
-    
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 0px #eee;
 }
 .face-front {
     transform: rotateY(0deg) translateZ(200px);

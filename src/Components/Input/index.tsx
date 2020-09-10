@@ -4,7 +4,12 @@ import './Input.css'
 
 type InputProps = React.ComponentPropsWithoutRef<'input'>
 
-const Input: React.FC<InputProps> = (props) => <input className="input" {...props}/>
+const Input: React.FC<InputProps> = (props) =>{
+    React.useEffect(() => {
+        console.log('input re-render')
+    })
+    return <input className="input" {...props}/>
+}
 
 
 export default Input  
