@@ -1,6 +1,9 @@
 import React, { FormEvent } from "react";
 import Input from "../Input";
-import { InputType } from "zlib";
+import googleLogo from '../../assets/google.png'
+
+import './Login.css'
+
 const Signup: React.FC = () => {
   const [nameValue, setNameValue] = React.useState<string>("");
   const [emailValue, setEmailValue] = React.useState<string>("");
@@ -22,7 +25,14 @@ const Signup: React.FC = () => {
       <Input placeholder="example@email.com"/>
       <label> Password</label>
       <Input type="password"/>
+      <div style={{display: 'flex', alignItems: 'center'}}>
+          <Input type="checkbox" id="remember"/>
+          <label className="font-small ml-1 pointer" htmlFor="remember"> remember me</label>
+      </div>
       <Input type="submit"/>
+        {/* <button className="login-with-google">
+          <span> <img src={googleLogo} alt=""/> </span>
+        </button> */}
     </div>
   );
 };
