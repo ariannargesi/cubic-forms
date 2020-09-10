@@ -1,19 +1,12 @@
 * {
     box-sizing: border-box;
 }
-body {
-    font-size: 14px;
-    padding: 20px;
-    text-align: center;
-    background:rgba(128, 128, 128, 0.233);
-}
+
 .wrapper {
+    /* here */
     width: 400px;
     height: 500px;
-    margin-left: 350px;
-    margin-top: 70px;
-    text-align: left;
-
+    margin-left: -50px;
 }
 .rec-prism {
     width: 100%;
@@ -22,16 +15,16 @@ body {
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 0.5s ease-in;
+    margin-top: 50px;
 }
 .face {
+    /* here */
     position: absolute;
     width: 400px;
     height: 500px;
     padding: 20px;
     border-radius: 3px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0px 0px 30px 0px #eee;
+    background: rgb(255, 113, 113);
 }
 .face-front {
     transform: rotateY(0deg) translateZ(200px);

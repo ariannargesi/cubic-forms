@@ -3,3 +3,23 @@ body {
     background: linear-gradient(313deg, rgba(255, 242, 2, 0.829) 47%, rgba(0,0,0,1) 47%, rgba(3,3,3,1) 48%, rgba(255, 0, 0, 0.753) 48%);
     background-attachment: fixed;
 }
+* {
+    font-family: Fira Code;
+}
+label {
+    font-size: 16px;
+}
+.font-small {
+    font-size: 14px;
+}
+.ml-1 {
+    margin-left: 10px;
+}
+.pointer {
+    cursor: pointer;
+}
+.d-flex{
+    justify-content: space-between  ;
+    align-items: center;
+    display: flex;
+}
