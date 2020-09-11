@@ -25,6 +25,7 @@
     padding: 20px;
     border-radius: 3px;
     background: rgb(255, 113, 113);
+    border: 3px solid rgba(238, 238, 238, 0.356);
 }
 .face-front {
     transform: rotateY(0deg) translateZ(200px);
