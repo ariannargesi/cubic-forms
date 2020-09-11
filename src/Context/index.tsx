@@ -16,7 +16,7 @@ interface IAction {
 }
 
 const initialState: IState = {
-    currentFace: 'show-left',
+    currentFace: 'show-top',
     isLightTheme: true,
     lightTheme: {},
     darkTheme: {}
