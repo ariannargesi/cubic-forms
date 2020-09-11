@@ -8,6 +8,7 @@ const App: React.FC = () => {
       <Cube/>
     </div>
     <ButtonsGroup/>
+    <div className="anim-circle"></div>
     </>
   );
 };
