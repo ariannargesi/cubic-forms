@@ -5,8 +5,11 @@ import Button from '../Button'
 
 const ButtonsGroupStyled = styled.div`
     direction: rtl;
+    position: absolute;
+    top: 30%;
+    right: 5%;
 `
-
+// 308560492398-kjesqudoqndn8ca1611ft11qlq88um4s.apps.googleusercontent.com
 
 const ButtonsGroup: React.FC = () => {
 
