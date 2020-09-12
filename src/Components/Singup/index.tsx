@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import GoogleAuth from '../GoogleAuth'
 import Input from "../Input";
 
 const Signup: React.FC = () => {
@@ -41,7 +40,6 @@ const Signup: React.FC = () => {
           </label>
         </div>
         <Input type="submit"/>
-        <button>Google Auth</button>
       </form>
     </div>
   );
