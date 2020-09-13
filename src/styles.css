@@ -2,6 +2,8 @@ body {
     background: rgb(255,244,2);
     background: linear-gradient(313deg, rgba(255, 242, 2, 0.829) 47%, rgba(0,0,0,1) 47%, rgba(3,3,3,1) 48%, rgba(255, 0, 0, 0.753) 48%);
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 * {
     font-family: Fira Code;
@@ -25,4 +27,11 @@ label {
 }
 .text-center {
     text-align: center;
+}
+
+.cubes{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top:2rem;
 }
