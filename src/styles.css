@@ -35,3 +35,16 @@ label {
     justify-content: space-evenly;
     padding-top:2rem;
 }
+.header {
+    text-align: center;
+    font-size: 22px;
+}
+.error {
+    color: red;
+    margin-top: 4rem;
+}
+.hints-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
