@@ -16,7 +16,7 @@ interface IAction {
 }
 
 const initialState: IState = {
-    currentFace: 'show-front',
+    currentFace: 'show-top',
     isLightTheme: true,
     lightTheme: {},
     darkTheme: {}
@@ -29,7 +29,6 @@ export enum ActionTypes {
 
 
 const reducer = (state: IState, action: IAction): IState => {
-    console.log(action)
     switch(action.type){
         case ActionTypes.UpdateFace: 
             return { ... state, currentFace: action.payload }
