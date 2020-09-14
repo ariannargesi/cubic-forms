@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import Input from "../../Input";
+import {Store} from '../../../Context/CubeContext'
 
 const Signup: React.FC = () => {
+
   const [emailValue, setEmailValue] = useState<string>("");
   const [passwordValue, setPasswordValue] = useState<string>("");
   const [confirmValue, setConfirmValue] = useState<string>("");
   const [ termValue, setTermValue ] = useState<boolean>(false)
+
+  const { state ,dispatch } = React.useContext(Store)
+
+
+
   return (
     <div className="face face-right">
       <form action="">
