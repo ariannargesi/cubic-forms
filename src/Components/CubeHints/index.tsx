@@ -10,7 +10,6 @@ import "./CubeHints.css";
 const CubeHints: React.FC = () => {
     const currentFace = React.useContext(Store).state.currentFace;
   
-    console.log(currentFace)
 
   return (
     <div className="wrapper cube-hints">
