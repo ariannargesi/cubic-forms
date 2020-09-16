@@ -10,13 +10,6 @@ const Signup: React.FC = () => {
   const [passwordValue, setPasswordValue] = React.useState<string>("");
   const [confirmValue, setConfirmValue] = React.useState<string>("");
 
-  // React.useEffect(() => {
-  //   console.log("re-render");
-  // });
-
-  // const submitHandler = (e: FormEvent): void => {
-  //   e.preventDefault();
-  // };
 
   return (
     <div className="face face-front">
