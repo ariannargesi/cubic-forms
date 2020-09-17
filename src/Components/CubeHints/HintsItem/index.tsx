@@ -2,7 +2,7 @@ import React from 'react'
 
 import IsTyping from '../../IsTyping'
 
-import { Store, StateEnum } from '../../../Context/CubeContext'
+import { Store } from '../../../Context/CubeContext'
 import './HintsItem.css'
 
 
@@ -12,7 +12,7 @@ import './HintsItem.css'
 type HintsItemProps = {
     title: string,
     value: string,
-    status: StateEnum,
+
     isActive?: boolean,
     isValid?: boolean,
     successHint?: string,
