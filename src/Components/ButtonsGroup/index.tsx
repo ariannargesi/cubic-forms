@@ -17,9 +17,8 @@ const ButtonsGroup: React.FC = () => {
         <div className="buttons-group">
             <Button onClick= { () => dispatcher('show-front') }>Login</Button>
             <Button onClick= { () => dispatcher('show-top') }> Sign up </Button>
-            <Button onClick= { () => dispatcher('show-back') }> Forget password </Button>
-            <Button onClick= { () => dispatcher('show-right') }> Subscribe </Button>
-            <Button onClick= { () => dispatcher('show-left') }> Contact us </Button>
+            <Button onClick= { () => dispatcher('show-left') }> Forget Password </Button>
+            <Button onClick= { () => dispatcher('show-back') }> About </Button>
             <Button onClick= { () => dispatcher('show-bottom') }> Message </Button>
         </div>
         
