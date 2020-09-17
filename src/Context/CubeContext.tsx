@@ -61,10 +61,13 @@ const initialState: IinitialState = {
 const reducer = (state: IinitialState, action: IAction): IinitialState => {
   const newState = { ...state };
   if (action.type === "TOGGLE_SIGNUP_ITEM_FOCUS")
-    newState.signup[action.payload].isActive = !newState.signup[action.payload]
-      .isActive;
+    newState.signup[action.payload].isActive = !newState.signup[action.payload].isActive;
   else if (action.type === "UPDATE_SIGNUP_INPUT_VALUE")
     newState.signup[action.payload.index].value = action.payload.value;
+  else if (action.type === "TOGGLE_LOGIN_ITEM_FOCUS")
+    newState.login[action.payload].isActive = !newState.login[action.payload].isActive;
+  else if (action.type === "UPDATE_LOGIN_INPUT_VALUE")
+    newState.login[action.payload.index].value = action.payload.value;
   else if (action.type === "UPDATE_COUNTER") newState.typing.counter += 10;
   else if (action.type === "RESET_COUNTER") newState.typing.counter = 0;
   else if (action.type === "TOGGLE_IS_TYPING")
