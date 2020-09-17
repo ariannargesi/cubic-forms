@@ -1,6 +1,8 @@
 import React from "react";
 
-import SingupHints from './Singup_hint'
+import SingupHint from './Singup_hint'
+import LoginHint from './Login_hint'
+
 
 import { Store } from "../../Context";
 
@@ -14,11 +16,11 @@ const CubeHints: React.FC = () => {
   return (
     <div className="wrapper cube-hints">
       <div className={`rec-prism ${currentFace}`}>
-        <SingupHints/>        
+        <SingupHint/> 
+        <LoginHint/>       
         <div className="face face-back"></div>
         <div className="face face-left"></div>
         <div className="face face-top"></div>
-        <div className="face face-front"></div>
         <div className="face face-bottom"></div>
       </div>
     </div>
