@@ -1,44 +1,36 @@
 import React from "react";
 import Hint from "../HintsItem";
-import { Store, HintType } from "../../../Context/CubeContext";
-import validator from 'validator'
+import { Store } from "../../../Context/CubeContext";
+import { isEmail, isValidPassword } from '../../../validation'
 
 
 const SignupHints: React.FC = () => {
   const { signup } = React.useContext(Store).state;   
   const [ email, password, confirm ] = signup 
 
-  const passwordIsValid = validator.isLength(password.value, {
-    min: 7,
-    max: 32
-  })
 
   return (
     <div className="face face-right">
-      <div>
-        <div className="header">
-          <p>2 incomplete</p>
-        </div>
+      <h1>Signup Hint</h1>
         <div className="hints-wrapper">
           <Hint
-            isValid={ validator.isEmail(email.value.trim()) }
+            isValid={ isEmail(email.value.trim()) }
             errorHint={"Please enter a valid email address"}
             successHint={""}
             { ...email }
           />
           <Hint
-            isValid={passwordIsValid}
+            isValid={ isValidPassword(password.value) }
             errorHint="Password must be at least 7 character"
             successHint=""
             { ...password }
           />
           <Hint
-            isValid={ password.value === confirm.value && passwordIsValid }
+            isValid={ password.value === confirm.value && isValidPassword(password.value) }
             errorHint="Password are not match"
             successHint=""
               { ...confirm }
           />
-        </div>
       </div>
     </div>
   );
