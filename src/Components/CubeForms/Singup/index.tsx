@@ -11,7 +11,7 @@ const Signup: React.FC = () => {
   const [passwordFieldType, setPasswordFieldType] = useState<string>("password")
   const [inputIconUrl, setInputIconUrl] = useState<string>(eye)
 
-  const { state, dispatch, toggleFocus, updateInput} = React.useContext(Store);
+  const { state, toggleFocus, updateInput} = React.useContext(Store);
   const { signup } = state;
 
 
