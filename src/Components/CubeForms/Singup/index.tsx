@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Input from "../../Input";
-import { Store, StateEnum } from "../../../Context/CubeContext";
+import { Store } from "../../../Context/CubeContext";
 
 // icons 
 import eye from '../../../assets/eye.png'
