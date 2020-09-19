@@ -1,6 +1,6 @@
 import React from "react";
 import CubeForms from './Components/CubeForms'
-import  CubeHints from './Components/CubeHints'
+import CubeHints from './Components/CubeHints'
 import ButtonsGroup from './Components/ButtonsGroup'
 import CubeContextProvider from './Context/CubeContext'
 const App: React.FC = () => {
@@ -8,14 +8,11 @@ const App: React.FC = () => {
     <>
     <ButtonsGroup/>
     <div className="cubes">
-    <CubeContextProvider>
-        <CubeForms/>
-        <CubeHints/>
-     </CubeContextProvider>
+      <CubeContextProvider>
+          <CubeForms/>
+          <CubeHints/>
+      </CubeContextProvider>
     </div>
-    
-    <div className="anim-circle"></div>
-  
     </>
   );
 };
