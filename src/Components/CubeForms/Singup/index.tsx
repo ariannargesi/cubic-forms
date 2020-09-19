@@ -1,19 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FormEvent } from "react";
 import Input from "../../Input";
+import { Store as FaceStore, ActionTypes } from '../../../Context'
 import { Store, FormType } from "../../../Context/CubeContext";
+import { isEmail, isValidPassword } from '../../../validation'
+
 // icons 
 import eye from '../../../assets/eye.png'
 import eyeDisable from '../../../assets/eye-disable.png'
 
 
 const Signup: React.FC = () => {
-  
+
   const [passwordFieldType, setPasswordFieldType] = useState<string>("password")
   const [inputIconUrl, setInputIconUrl] = useState<string>(eye)
 
-  const { state, toggleFocus, updateInput} = React.useContext(Store);
+  const { state, toggleFocus, updateInput } = React.useContext(Store);
   const { signup } = state;
 
+  const [ email, password, confirm ] = signup 
+  const { dispatch } = React.useContext(FaceStore) 
+
+  const submitIsDisable  = !(isValidPassword(password.value) && confirm.value === password.value)
 
 
   const togglePasswordFieldType = () => {
@@ -22,9 +29,17 @@ const Signup: React.FC = () => {
 
   }
 
+  const handleSubmit = ( e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault()
+    dispatch({
+      type: ActionTypes.UpdateFace,
+      payload: 'show-bottom' 
+  })
+  };
+
   return (
     <div className="face face-right">
-      <form action="">
+      <form action="" onSubmit={(e) => handleSubmit(e)} >
         <div className="d-flex">
           <h1>Sing up</h1>
           <a href="#">Log in</a>
@@ -33,10 +48,11 @@ const Signup: React.FC = () => {
         <Input
           type="email"
           value={signup[0].value}
-          onChange={e => updateInput(0, e.target.value, FormType.Signup) }
+          onChange={e => updateInput(0, e.target.value, FormType.Signup)}
           placeholder="example@emial.com"
           onFocus={() => toggleFocus(0, FormType.Signup)}
           onBlurCapture={() => toggleFocus(0, FormType.Signup)}
+          required
         />
         <label>Password</label>
         <img src={inputIconUrl} id="password-field-icon" alt="" onClick={() => togglePasswordFieldType()} />
@@ -44,24 +60,21 @@ const Signup: React.FC = () => {
           type={passwordFieldType}
           value={signup[1].value}
           onChange={e => updateInput(1, e.target.value, FormType.Signup)}
-          onFocus={() =>  toggleFocus(1, FormType.Signup)}
-          onBlurCapture={() =>  toggleFocus(1, FormType.Signup)}
+          onFocus={() => toggleFocus(1, FormType.Signup)}
+          onBlurCapture={() => toggleFocus(1, FormType.Signup)}
+          required
         />
         <label>Confirm password</label>
         <Input
           type="password"
-          onFocus={() =>  toggleFocus(2, FormType.Signup)}
-          onBlurCapture={() =>  toggleFocus(2, FormType.Signup)}
+          onFocus={() => toggleFocus(2, FormType.Signup)}
+          onBlurCapture={() => toggleFocus(2, FormType.Signup)}
           value={signup[2].value}
           onChange={e => updateInput(2, e.target.value, FormType.Signup)}
+          required
         />
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Input type="checkbox" id="terms" />
-          <label className="font-small ml-1 pointer" htmlFor="terms">
-            i agree with the <a href="#">terms of service</a>
-          </label>
-        </div>
-        <Input type="submit" />
+
+        <Input type="submit" style={{ marginTop: '2rem' }}  disabled={ submitIsDisable } />
       </form>
     </div>
   );
