@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../../Input";
-
+import { isValidPassword } from '../../../validation'
+import { Store as FaceStore, ActionTypes } from '../../../Context'
 import { Store, FormType } from "../../../Context/CubeContext";
 
 import "./Login.css";
@@ -8,13 +9,27 @@ import "./Login.css";
 const Signup: React.FC = () => {
   const { state, toggleFocus, updateInput } = React.useContext(Store);
 
+  const { dispatch } = React.useContext(FaceStore) 
+
   const { login } = state 
 
   const [ email, password ] = login 
 
+  const submitIsDisable  = !(isValidPassword(password.value))
+
+
+
+  const handleSubmit = ( e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault()
+    dispatch({
+      type: ActionTypes.UpdateFace,
+      payload: 'show-bottom' 
+  })
+}
 
   return (
     <div className="face face-front">
+      <form  onSubmit={(e) => handleSubmit(e)}>
       <h1>Login</h1>
       <label>Email Address</label>
       <Input
@@ -24,6 +39,7 @@ const Signup: React.FC = () => {
         onFocus={() => toggleFocus(0, FormType.Login)}
         onBlurCapture={() => toggleFocus(0, FormType.Login)}
         placeholder="example@email.com"
+        required
       />
       <label> Password</label>
       <Input 
@@ -40,7 +56,8 @@ const Signup: React.FC = () => {
           remember me
         </label>
       </div>
-      <Input type="submit" />
+      <Input type="submit" style={{ marginTop: '2rem' }}  disabled={ submitIsDisable } />
+      </form>
     </div>
   );
 };
