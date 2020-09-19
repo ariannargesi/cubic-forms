@@ -32,6 +32,9 @@
     border: none;
     cursor: pointer;
 }
+.input[type="submit"]:disabled{
+    cursor: not-allowed;
+}
 .input[type="submit"]:hover{
     background-color: rgb(104, 104, 255);
 }
