@@ -1,5 +1,5 @@
 import React from "react";
-
+import { counter } from '../statics'
 export const Store = React.createContext<any>({});
 
 interface IAction {
@@ -20,6 +20,7 @@ interface IinitialState {
   typing: PressButton;
   signup: [HintType, HintType, HintType];
   login: [HintType, HintType];
+  forgetPassword: [HintType]
 }
 
 const initialState: IinitialState = {
@@ -56,9 +57,18 @@ const initialState: IinitialState = {
       value: "",
     },
   ],
+  forgetPassword: [
+    {
+      title: "Email Address",
+      isActive: null,
+      value: ""
+    }
+  ]
 };
 
 const reducer = (state: IinitialState, action: IAction): IinitialState => {
+  
+
   const newState = { ...state };
   if (action.type === "TOGGLE_SIGNUP_ITEM_FOCUS")
     newState.signup[action.payload].isActive = !newState.signup[action.payload].isActive;
@@ -68,6 +78,10 @@ const reducer = (state: IinitialState, action: IAction): IinitialState => {
     newState.login[action.payload].isActive = !newState.login[action.payload].isActive;
   else if (action.type === "UPDATE_LOGIN_INPUT_VALUE")
     newState.login[action.payload.index].value = action.payload.value;
+    else if (action.type === "TOGGLE_FORGET_PASSWORD_ITEM_FOCUS")
+    newState.forgetPassword[action.payload].isActive = !newState.forgetPassword[action.payload].isActive;
+  else if (action.type === "UPDATE_FORGET_PASSWORD_INPUT_VALUE")
+    newState.forgetPassword[action.payload.index].value = action.payload.value;
   else if (action.type === "UPDATE_COUNTER") newState.typing.counter += 10;
   else if (action.type === "RESET_COUNTER") newState.typing.counter = 0;
   else if (action.type === "TOGGLE_IS_TYPING")
@@ -76,8 +90,9 @@ const reducer = (state: IinitialState, action: IAction): IinitialState => {
 };
 
 export enum FormType {
-  Signup = "SIGNUP",
+  Signup = "SIGNUP",  
   Login = "LOGIN",
+  ForgetPassword = "FORGET_PASSWORD"
 }
 
 const CubeContextProvider: React.FC = (props: any) => {
@@ -99,8 +114,9 @@ const CubeContextProvider: React.FC = (props: any) => {
         value,
       },
     };
+    
     dispatch(action);
-    dispatch({ type: "RESET_COUNTER", payload: null });
+    counter.value = 0 
   };
 
   return (
