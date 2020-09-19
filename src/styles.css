@@ -30,10 +30,12 @@ label {
 }
 
 .cubes{ 
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top:2rem;
+position: absolute;
+height: 100vh;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
 }
 .header {
     text-align: center;
@@ -46,7 +48,6 @@ label {
 .hints-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 #password-field-icon {
     position: absolute; 

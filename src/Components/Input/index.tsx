@@ -11,7 +11,9 @@ type Validation = {
 };
 
 const Input: React.FC<InputProps & Validation> = (props) => {
+
   const [isActive, toggleActive] = React.useState(false);
+
   return (
     <div className={"input-wrapper"}>
       <span className="error-wrapper">
