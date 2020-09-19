@@ -19,7 +19,7 @@ const ButtonsGroup: React.FC = () => {
             <Button onClick= { () => dispatcher('show-top') }> Sign up </Button>
             <Button onClick= { () => dispatcher('show-left') }> Forget Password </Button>
             <Button onClick= { () => dispatcher('show-back') }> About </Button>
-            <Button onClick= { () => dispatcher('show-bottom') }> Message </Button>
+            <Button onClick= { () => dispatcher('show-bottom') }> Thanks </Button>
         </div>
         
     )
