@@ -16,19 +16,19 @@ const SignupHints: React.FC = () => {
           <Hint
             isValid={ isEmail(email.value.trim()) }
             errorHint={"Please enter a valid email address"}
-            successHint={""}
+            successHint={"Email address is valid"}
             { ...email }
           />
           <Hint
             isValid={ isValidPassword(password.value) }
             errorHint="Password must be at least 7 character"
-            successHint=""
+            successHint="Password is valid"
             { ...password }
           />
           <Hint
             isValid={ password.value === confirm.value && isValidPassword(password.value) }
-            errorHint="Password are not match"
-            successHint=""
+            errorHint="Passwords are not match"
+            successHint="Passwords are match"
               { ...confirm }
           />
       </div>
