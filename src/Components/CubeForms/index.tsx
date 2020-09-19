@@ -5,37 +5,44 @@ import ForgetPassword from './ForgetPassword'
 import Thanks from './Thanks'
 import { Store } from "../../Context";  
 import { Store as CubeStore } from '../../Context/CubeContext'
-import Input from '../Input'
+import { counter } from '../../statics'
+import Gears from '../Gears'
+
 import "./Cube.css";
 
 const Cube: React.FC = () => {
 
-  const { state, dispatch } = React.useContext(CubeStore) 
+  const { dispatch } = React.useContext(CubeStore) 
+  
+  const [ state, setState ] = React.useState('he')
+
+  React.useEffect(() => {
+    setTimeout(()=>{
+      setState('ads')
+    },5000)
+  })
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-      dispatch({ type: "UPDATE_COUNTER" })
-    }, 50)
-    return () => clearInterval(intervalId)
-  },[])
-
-  // Detect typing here here
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const counter = state.typing.counter
-
-      let isTyping 
-
-      if(counter < 50) isTyping = true 
-      else isTyping = false 
       
+    let isTyping = false
+    
+    if( isTyping === false && counter.value < 50 ) {
       const action = {
         type: "TOGGLE_IS_TYPING",
-        payload: isTyping 
+        payload: true  
       }
-      
       dispatch(action)
-
+      isTyping = true 
+    }
+    else{
+      const action = {
+        type: "TOGGLE_IS_TYPING",
+        payload: false         
+      }
+      dispatch(action)
+      isTyping = false 
+    }    
     }, 50)
 
     return () => clearInterval(intervalId)
@@ -44,6 +51,7 @@ const Cube: React.FC = () => {
   const currentFace = React.useContext(Store).state.currentFace;
   return (
     <div className="wrapper">
+      <Gears/>
       <div className={`rec-prism ${currentFace}`}>
       <Login/>
       <Signup/>
