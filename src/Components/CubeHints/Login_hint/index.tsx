@@ -14,10 +14,14 @@ const LoginHint: React.FC = () => {
             <div className="hints-wrapper">
                 <Hint
                     isValid={isEmail(email.value.trim())}
+                    successHint="Email address is valid"
+                    errorHint="Enter a valid email address"
                     { ...email }
                 />
                 <Hint
                     isValid={isValidPassword(password.value)}
+                    successHint="Password is valid"
+                    errorHint="Enter a valid password"
                     { ...password }
                 />
             </div>
