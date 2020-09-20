@@ -51,7 +51,7 @@ const Cube: React.FC = () => {
   const currentFace = React.useContext(Store).state.currentFace;
   return (
     <div className="wrapper">
-      <Gears/>
+      <Gears dependency={currentFace} />
       <div className={`rec-prism ${currentFace}`}>
       <Login/>
       <Signup/>
