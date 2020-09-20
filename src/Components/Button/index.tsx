@@ -1,5 +1,4 @@
 import React from 'react'
-import Styled from 'styled-components'
 import './Button.css'
 type ButtonProps = React.ComponentPropsWithoutRef<'button'>
 
