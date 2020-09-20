@@ -4,6 +4,7 @@ import App from './App';
 import StoreProvider  from './Context'
 
 import './styles.css'
+import './responsive.css'
 ReactDOM.render(
   <StoreProvider>
     <App/>
