@@ -225,6 +225,9 @@ width: 100%;
     }
 }
 
+body {
+    background-color: black;
+}
 @media (max-width: 400px){
     body {
         background: lightblue;
