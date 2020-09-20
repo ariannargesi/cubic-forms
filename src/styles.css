@@ -242,6 +242,9 @@ width: 100%;
     .cube-hints {
         margin-top: 5rem;
     }
+    h1{
+        font-size: 20px;
+    }
 }
 
 
