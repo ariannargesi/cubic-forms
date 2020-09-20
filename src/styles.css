@@ -239,4 +239,9 @@ width: 100%;
     .cubes{
         display: block;
     }
+    .cube-hints {
+        margin-top: 5rem;
+    }
 }
+
+
