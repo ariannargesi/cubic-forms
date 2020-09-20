@@ -1,6 +1,10 @@
 @media (max-width: 400px){
     body {
+        
         background: lightblue ;
+    }
+    h1{
+        font-size: 22px;
     }
     .buttons-group {
         margin: 0;
@@ -29,6 +33,49 @@
     .wrapper {
         width: 100%;
         transform: scale(0.9);
+    }
+    .face {
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    h1{
+        font-size: 22px;
+    }
+    body {
+        background: lightblue ;
+    }
+    .buttons-group {
+        margin: 0;
+        position: relative;
+    }
+    .button {
+        margin: 0.1rem;
+    }
+    .cubes {
+        display: block;
+    }
+    .wrapper {
+        width: 90%;
+        transform: scale(0.9);
+        margin: 0 auto;
+    }
+    .face {
+        width: 90%;
+    }
+}
+@media (max-width: 800px){
+    h1{
+        font-size: 22px;
+    }
+    .button {
+        margin: 0.5rem;
+        font-size: 14px;
+    }
+    .wrapper {
+        width: 100%;
+        transform: scale(0.9);
+        margin: 0 auto;
     }
     .face {
         width: 100%;
