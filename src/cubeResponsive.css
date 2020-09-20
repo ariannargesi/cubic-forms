@@ -1,0 +1,23 @@
+@media (max-width: 400px){
+    .cubes {
+        width: 95%;
+        position: relative;
+        margin:  0 auto;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .face {
+        width: 100%;
+        padding: 8px
+    }
+    .face-top {
+        width: 100%;
+    }
+    .face-bottom {
+        width: 100%;
+    }
+    h1{
+        font-size: 20px;
+    }
+}
