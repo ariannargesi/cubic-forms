@@ -224,3 +224,19 @@ width: 100%;
         transform: scale(1);
     }
 }
+
+@media (max-width: 400px){
+    body {
+        background: lightblue;
+    }
+    .buttons-group {
+        position: relative;
+    }
+    .button{
+        font-size: 12px;
+        margin: 0;
+    }
+    .cubes{
+        display: block;
+    }
+}
