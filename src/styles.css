@@ -231,26 +231,5 @@ body {
 * {
     border: 1px solid white;
 }
-@media (max-width: 400px){
-    body {
-        background: lightblue;
-    }
-    .buttons-group {
-        position: relative;
-    }
-    .button{
-        font-size: 12px;
-        margin: 0;
-    }
-    .cubes{
-        display: block;
-    }
-    .cube-hints {
-        margin-top: 5rem;
-    }
-    h1{
-        font-size: 20px;
-    }
-}
 
 
