@@ -12,16 +12,16 @@ type Validation = {
 
 const Input: React.FC<InputProps & Validation> = (props) => {
 
-  const [isActive, toggleActive] = React.useState(false);
+  const [showHint, setShowHint] = React.useState(false);
 
   return (
     <div className={"input-wrapper"}>
       <span className="error-wrapper">
-        {props.validation?.showError && isActive && (
+        {props.validation?.showError && showHint && (
           <h5>{props.validation?.error}</h5>
         )}
       </span>
-      <input className="input" {...props} onBlur={() => toggleActive(true)} />
+      <input className="input" {...props} onBlur={() => setShowHint(true)} />
     </div>
   );
 };

@@ -42,7 +42,8 @@ const Signup: React.FC = () => {
       <form action="" onSubmit={(e) => handleSubmit(e)} >
         <div className="d-flex">
           <h1>Sing up</h1>
-          <a href="#">Log in</a>
+          
+        <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "face-front" }) } > <line style={{color: 'black'}}>|</line> Login</a>
         </div>
         <label>Email address</label>
         <Input

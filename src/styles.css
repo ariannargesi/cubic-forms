@@ -225,5 +225,16 @@ width: 100%;
     }
 }
 
-
-
+h1{
+    color: white ;
+}
+.cube-hints h1{
+    color: rgb(253, 124, 146);
+}
+a{
+    text-decoration: none;
+    color: lightgray;
+}
+line {
+    color: black;
+}

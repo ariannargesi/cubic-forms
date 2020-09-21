@@ -1,44 +1,7 @@
-@media (max-width: 400px){
-    body {
-        
-        background: lightblue ;
+@media (max-width: 600px){
+    #password-field-icon{
+        top: 44%;
     }
-    h1{
-        font-size: 22px;
-    }
-    .buttons-group {
-        margin: 0;
-        position: relative;
-    }
-    .button {
-        margin: 0.1rem;
-    }
-    .cubes {
-        display: block;
-    }
-    /* .wrapper {
-      width: 100%;
-    }
-    .face {
-        width: 90%;
-    }
-    .face-top {
-        width: 90%;
-    }
-    .face-bottom{
-    }
-    .cube-hints {
-        margin-top: 2rem;
-    } */
-    .wrapper {
-        width: 100%;
-        transform: scale(0.9);
-    }
-    .face {
-        width: 100%;
-    }
-}
-@media (max-width: 500px){
     h1{
         font-size: 22px;
     }
@@ -65,6 +28,9 @@
     }
 }
 @media (max-width: 800px){
+    #password-field-icon{
+        top: 44%;
+    }
     h1{
         font-size: 22px;
     }
