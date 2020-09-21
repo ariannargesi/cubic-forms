@@ -1,4 +1,5 @@
 @media (max-width: 600px){
+    
     #password-field-icon{
         top: 44%;
     }
@@ -10,13 +11,14 @@
     }
     .buttons-group {
         margin: 0;
-        position: relative;
+        
     }
     .button {
         margin: 0.1rem;
     }
     .cubes {
         display: block;
+        margin-top: 4rem;
     }
     .wrapper {
         width: 90%;

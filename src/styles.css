@@ -226,7 +226,7 @@ width: 100%;
 }
 
 h1{
-    color: white ;
+    color: rgb(224, 224, 224) ;
 }
 .cube-hints h1{
     color: rgb(253, 124, 146);
@@ -236,5 +236,8 @@ a{
     color: lightgray;
 }
 line {
-    color: black;
+    color: rgb(221, 221, 221);
+}
+label{
+    color: white;
 }
