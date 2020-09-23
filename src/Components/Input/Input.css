@@ -1,7 +1,7 @@
-.input-wrapper {
+
+.input {
     margin: 1rem 0;
     position: relative;
-    
 }
 .input:not([type="checkbox"]){
     box-sizing: border-box;
