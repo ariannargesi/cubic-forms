@@ -12,5 +12,9 @@ describe('<ButtonsGroup>', () => {
         const wrapper = shallow(<ButtonsGroup/>)
         expect(wrapper.find(Button)).toHaveLength(5)
     })
+    it("should have buttons group class name ", () => {
+        const wrapper = shallow(<ButtonsGroup/>)
+        expect(wrapper.hasClass('buttons-group')).toEqual(true)
+    })
 })
 
