@@ -32,7 +32,7 @@ const Signup: React.FC = () => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="d-flex">
           <h1>Login</h1>
-          <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "show-top" }) } > <line style={{color: 'black'}}>|</line> Signup</a>
+          <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "show-top" }) } > <line style={{color: 'black'}}>|</line> Sign up</a>
         </div>
           <label>Email Address</label>
           <Input
