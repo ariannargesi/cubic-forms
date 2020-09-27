@@ -39,7 +39,7 @@ const HintsItem: React.FC<HintsItemProps> = (props) => {
             else return <span>{props.errorHint}</span>
         }
         else if (props.isActive && isTyping) 
-            return <IsTyping>you are typing</IsTyping>
+            return <IsTyping>You are typing</IsTyping>
         else if(props.value === "")
             return <span>Selected</span>
         else return <span style={{display: "block", width: "100px", height: '22px'}}></span>
