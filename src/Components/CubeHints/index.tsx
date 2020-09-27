@@ -20,8 +20,6 @@ const CubeHints: React.FC = () => {
         <LoginHint/>       
         <ForgetPasswordHint/>
         <ThanksHint/>
-        
-        <div className="face face-back"></div>
         <div className="face face-left"></div>
       </div>
     </div>
