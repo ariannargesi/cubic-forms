@@ -32,7 +32,7 @@ const Signup: React.FC = () => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="d-flex">
           <h1>Login</h1>
-          <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "show-top" }) } > <line style={{color: 'black'}}>|</line> Login</a>
+          <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "show-top" }) } > <line style={{color: 'black'}}>|</line> Signup</a>
         </div>
           <label>Email Address</label>
           <Input
@@ -44,7 +44,10 @@ const Signup: React.FC = () => {
             placeholder="example@email.com"
             required
           />
-          <label> Password</label>
+          <div className="d-flex">
+            <label> Password</label>
+            <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "show-left" })  } >Forget Password</a>
+          </div>
           <Input
             type="password"
             value={password.value}
