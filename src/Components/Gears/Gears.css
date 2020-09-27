@@ -12,3 +12,9 @@
     background-size: 50vh!important;
   
 }
+.show-png {
+    background-image: url('../../assets/gears.png');
+}
+.show-gif {
+    background-image: url('../../assets/gears.gif');
+}
