@@ -30,7 +30,7 @@ const ForgetPassword: React.FC = () => {
     return (
         <div className="face face-top">
             <h1>Forget Password</h1>
-            <p> We will sent you and email that contain a link that you can reset your password with it </p>
+            <p style={{color: "white"}} > We will send you an email that contains a link that you can reset your password with it </p>
             <form  onSubmit={(e) => handleSubmit(e)}>
                 <Input
                     type="email"
