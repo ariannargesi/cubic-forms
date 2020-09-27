@@ -25,6 +25,9 @@ label {
     align-items: center;
     display: flex;
 }
+.d-flex a {
+    color: rgb(32, 32, 255);
+}
 .text-center {
     text-align: center;
 }

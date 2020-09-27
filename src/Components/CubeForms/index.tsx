@@ -3,6 +3,7 @@ import Login from './Login'
 import Signup from './Singup'
 import ForgetPassword from './ForgetPassword'
 import Thanks from './Thanks'
+import About from './About_hint'
 import { Store } from "../../Context";  
 import { Store as CubeStore } from '../../Context/CubeContext'
 import { counter } from '../../statics'
@@ -56,7 +57,7 @@ const Cube: React.FC = () => {
       <Login/>
       <Signup/>
       <ForgetPassword/>
-        <div className="face face-back"></div>
+      <About/>
         <div className="face face-left"></div>
         <Thanks/>
       </div>
