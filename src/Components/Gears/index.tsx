@@ -30,10 +30,10 @@ const Gears =  React.memo<GearsProps>(({dependency}) => {
             console.log(firstTime)
     }, [dependency])
    
-
+    const backgroundImage = showGif ? "show-gif" : 'show-png'
     return (
         <>
-         <div className="gears" style={{backgroundImage: `url(${ showGif ? gearsGif : gearsPng })`}}  > 
+         <div className={`gears ${backgroundImage}`}> 
          </div>
         </>
     )
