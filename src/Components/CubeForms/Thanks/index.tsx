@@ -11,7 +11,7 @@ const Thanks: React.FC = () => {
                 Thanks you for checking out.
             </p>
             <p style={{color: 'white'}}>
-            Please consider this project it's only for testing cubic shapes on the web, and there is no server for authentication the users.
+            Please consider this project it's only for testing cubic shapes on the web, and there is no backend service for authentication the users.
             </p>
             <div>
                 <a href='https://github.com/ariannargesi/cubic-forms'>Github</a>
