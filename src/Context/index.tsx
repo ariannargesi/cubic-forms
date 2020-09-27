@@ -12,7 +12,7 @@ interface IAction {
 }
 
 const initialState: IState = {
-    currentFace: 'show-front',
+    currentFace: 'show-top',
 }
 
 export enum ActionTypes {
