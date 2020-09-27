@@ -41,7 +41,7 @@ const Signup: React.FC = () => {
     <div className="face face-right">
       <form action="" onSubmit={(e) => handleSubmit(e)} >
         <div className="d-flex">
-          <h1>Sing up</h1>
+          <h1>Sign up</h1>
           
         <a href="#" onClick={ () => dispatch({ type: "UPDATE_FACE", payload: "face-front" }) } > <line style={{color: 'black'}}>|</line> Login</a>
         </div>
