@@ -8,7 +8,7 @@ const Thanks: React.FC = () => {
         <div className="face face-bottom">
             <h1>Thank you</h1>
             <p style={{color: "white"}}>
-                Thanks you for checking out.
+                Thank you for checking out.
             </p>
             <p style={{color: 'white'}}>
             Please consider this project it's only for testing cubic shapes on the web, and there is no backend service for authentication the users.
